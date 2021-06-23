@@ -1,7 +1,7 @@
 <?php
 /*
-Plugin Name: Bairro e Telefone Obrigatório no Checkout
-Description: Plugin para tornar obrigatório os campos de checkout Bairro e Telefone. Pré-requisito: Brazilian Market on WooCommerce
+Plugin Name: Bairro Obrigatório no Checkout
+Description: Plugin para tornar obrigatório o campo de checkout Bairro. Pré-requisito: Brazilian Market on WooCommerce
 Author: Diogo Bratti
 */
 
@@ -11,7 +11,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 add_filter( 'woocommerce_billing_fields', function( $fields ) {
     $fields['billing_neighborhood']['required'] = true;
-    $fields['billing_cellphone']['required'] = true;
 
     return $fields;
 }, 20 );
